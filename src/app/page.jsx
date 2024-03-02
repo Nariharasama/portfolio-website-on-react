@@ -148,11 +148,11 @@ function Education() {
             display={"flex"}
             xs={3.5}
             alignItems={"center"}
+            className={"w-[420px]"}
             justifyContent={"left"}
           >
             <Typography
               align={"left"}
-              className={"w-[400px]"}
               variant={"h6"}
               display={"flex"}
               color={"primary"}
@@ -164,7 +164,7 @@ function Education() {
             item
             display={"flex"}
             xs={3.5}
-            className={"w-[400px]"}
+            className={"w-[420px]"}
             alignItems={"center"}
             justifyContent={"center"}
           ></Grid>
@@ -172,7 +172,7 @@ function Education() {
             item
             display={"flex"}
             xs={3.5}
-            className={"w-[400px]"}
+            className={"w-[420px]"}
             alignItems={"center"}
             justifyContent={"center"}
           ></Grid>
@@ -196,7 +196,7 @@ function Education() {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Card className={"w-[400px] h-[320px]"}>
+            <Card className={"w-[420px] h-[320px]"}>
               <CardContent>
                 <Typography
                   align={"left"}
@@ -209,7 +209,7 @@ function Education() {
                 <Box className={"w-full h-[56px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[390px] h-[180px]"}
+                  className={"w-[360px] h-[180px]"}
                   variant={"body2"}
                   display={"flex"}
                 >
@@ -220,7 +220,7 @@ function Education() {
                 </Typography>
                 <Typography
                   align={"left"}
-                  className={"w-[390px]"}
+                  className={"w-[400px]"}
                   variant={"h6"}
                   display={"flex"}
                   color={"primary"}
@@ -237,7 +237,7 @@ function Education() {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Card className={"w-[400px] h-[320px]"}>
+            <Card className={"w-[390px] h-[320px]"}>
               <CardContent>
                 <Typography
                   align={"left"}
@@ -250,7 +250,7 @@ function Education() {
                 <Box className={"w-full h-[56px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[390px] h-[180px]"}
+                  className={"w-[360px] h-[180px]"}
                   variant={"body2"}
                   display={"flex"}
                 >
@@ -261,7 +261,7 @@ function Education() {
                 </Typography>
                 <Typography
                   align={"left"}
-                  className={"w-[390px]"}
+                  className={"w-[400px]"}
                   variant={"h6"}
                   display={"flex"}
                   color={"primary"}
@@ -278,7 +278,7 @@ function Education() {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Card className={"w-[400px] h-[320px]"}>
+            <Card className={"w-[420px] h-[320px]"}>
               <CardContent>
                 <Typography
                   align={"left"}
@@ -291,7 +291,7 @@ function Education() {
                 <Box className={"w-full h-[56px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[390px] h-[180px]"}
+                  className={"w-[360px] h-[180px]"}
                   variant={"body2"}
                   display={"flex"}
                 >
@@ -301,7 +301,7 @@ function Education() {
                 </Typography>
                 <Typography
                   align={"left"}
-                  className={"w-[390px]"}
+                  className={"w-[400px]"}
                   variant={"h6"}
                   display={"flex"}
                   color={"primary"}
