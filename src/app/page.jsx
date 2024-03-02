@@ -209,7 +209,7 @@ function Education() {
                 <Box className={"w-full h-[56px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[360px] h-[180px]"}
+                  className={"w-[320px] h-[180px]"}
                   variant={"body2"}
                   display={"flex"}
                 >
@@ -237,7 +237,7 @@ function Education() {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Card className={"w-[390px] h-[320px]"}>
+            <Card className={"w-[420px] h-[320px]"}>
               <CardContent>
                 <Typography
                   align={"left"}
@@ -250,7 +250,7 @@ function Education() {
                 <Box className={"w-full h-[56px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[360px] h-[180px]"}
+                  className={"w-[320px] h-[180px]"}
                   variant={"body2"}
                   display={"flex"}
                 >
@@ -291,7 +291,7 @@ function Education() {
                 <Box className={"w-full h-[56px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[360px] h-[180px]"}
+                  className={"w-[320px] h-[180px]"}
                   variant={"body2"}
                   display={"flex"}
                 >
