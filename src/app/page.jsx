@@ -133,51 +133,20 @@ function NaviButton() {
 function Education() {
   return (
     <>
-      <Box className={"w-full h-[40px]"} display={"flex"}>
-        <Grid
-          container
-          className={"w-full h-[40px]"}
+      <Box
+        className={"w-full h-[40px]"}
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
+        <Typography
+          align={"center"}
+          variant={"h6"}
           display={"flex"}
-          spacing={1}
-          alignItems={"center"}
-          justifyContent={"center"}
+          color={"primary"}
         >
-          <Grid xs display={"flex"}></Grid>
-          <Grid
-            item
-            display={"flex"}
-            xs={3.5}
-            alignItems={"center"}
-            className={"w-[420px]"}
-            justifyContent={"left"}
-          >
-            <Typography
-              align={"left"}
-              variant={"h6"}
-              display={"flex"}
-              color={"primary"}
-            >
-              Education Experience
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            display={"flex"}
-            xs={3.5}
-            className={"w-[420px]"}
-            alignItems={"center"}
-            justifyContent={"center"}
-          ></Grid>
-          <Grid
-            item
-            display={"flex"}
-            xs={3.5}
-            className={"w-[420px]"}
-            alignItems={"center"}
-            justifyContent={"center"}
-          ></Grid>
-          <Grid xs display={"flex"}></Grid>
-        </Grid>
+          Education Experience
+        </Typography>
       </Box>
       <Box className={"w-full h-[400px]"} display={"flex"}>
         <Grid
