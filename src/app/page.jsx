@@ -214,7 +214,7 @@ function Education() {
                   variant={"subtitle2"}
                   display={"flex"}
                 >
-                  2.Xi’an Jiaotong University, China (Undergraduate)
+                  2.Xi’an Jiaotong University, China
                 </Typography>
                 <Box className={"w-full h-[56px]"}></Box>
                 <Typography
