@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import Image from "next/image";
-import { Box, Button, IconButton, Link, Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Divider from "@mui/material/Divider";
 import { useRouter } from "next/navigation";
