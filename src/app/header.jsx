@@ -20,7 +20,7 @@ export default function Header() {
           alignItems={"center"}
           display={"flex"}
         >
-          <Grid item xs={4}>
+          <Grid item xs={4.5}>
             <Grid container>
               <Grid item className={"w-[16px]"}></Grid>
               <Grid item alignItems={"center"} display={"flex"}>
@@ -63,7 +63,7 @@ export default function Header() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid xs></Grid>
+          <Grid xs display={"flex"}></Grid>
           <Grid
             item
             alignItems={"center"}
@@ -76,17 +76,16 @@ export default function Header() {
               display={"flex"}
               alignItems={"center"}
             >
-              <Box className={"w-[8px]"}></Box>
+              <Box className={"w-[6px]"}></Box>
               <Typography variant={"body2"} color={"primary"} align={"center"}>
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 Recently searching for job. Contact me if you're requiring web
                 developer or designer.
               </Typography>
-              <Box className={"w-[8px]"}></Box>
+              <Box className={"w-[6px]"}></Box>
             </Box>
-            <Box className={"w-[8px]"}></Box>
+            <Box className={"w-[4px]"}></Box>
             <Box
-              className={"w-[48px]"}
+              className={"w-[40px]"}
               alignItems={"center"}
               justifyContent={"center"}
               display={"flex"}
@@ -105,7 +104,7 @@ export default function Header() {
               </IconButton>
             </Box>
             <Box
-              className={"w-[48px]"}
+              className={"w-[40px]"}
               alignItems={"center"}
               justifyContent={"center"}
               display={"flex"}
@@ -121,7 +120,7 @@ export default function Header() {
               </IconButton>
             </Box>
             <Box
-              className={"w-[48px]"}
+              className={"w-[40px]"}
               alignItems={"center"}
               justifyContent={"center"}
               display={"flex"}
