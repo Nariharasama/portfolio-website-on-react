@@ -175,11 +175,10 @@ function Education() {
                 >
                   1.Xi’an Jiaotong University’s Young Gifted Project
                 </Typography>
-                <Box className={"w-full h-[56px]"}></Box>
+                <Box className={"w-full h-[48px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[320px] h-[180px]"}
-                  variant={"body2"}
+                  className={"w-[320px] h-[180px] text-xs"}
                   display={"flex"}
                 >
                   After graduated from middle school, I entered The Young gifted
@@ -216,11 +215,10 @@ function Education() {
                 >
                   2.Xi’an Jiaotong University, China
                 </Typography>
-                <Box className={"w-full h-[56px]"}></Box>
+                <Box className={"w-full h-[48px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[320px] h-[180px]"}
-                  variant={"body2"}
+                  className={"w-[320px] h-[180px] text-xs"}
                   display={"flex"}
                 >
                   I entered college after finishing Young Gifted Project’s
@@ -257,11 +255,10 @@ function Education() {
                 >
                   3.Chiba University, Japan (Exchange student)
                 </Typography>
-                <Box className={"w-full h-[56px]"}></Box>
+                <Box className={"w-full h-[48px]"}></Box>
                 <Typography
                   align={"left"}
-                  className={"w-[320px] h-[180px]"}
-                  variant={"body2"}
+                  className={"w-[320px] h-[180px] text-xs"}
                   display={"flex"}
                 >
                   I got the chance to study in Chiba University as an exchange

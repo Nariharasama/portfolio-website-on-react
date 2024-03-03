@@ -77,7 +77,11 @@ export default function Header() {
               alignItems={"center"}
             >
               <Box className={"w-[6px]"}></Box>
-              <Typography variant={"body2"} color={"primary"} align={"center"}>
+              <Typography
+                className={"text-xs"}
+                color={"primary"}
+                align={"center"}
+              >
                 Recently searching for job. Contact me if you're requiring web
                 developer or designer.
               </Typography>
