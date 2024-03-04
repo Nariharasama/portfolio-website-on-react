@@ -1,13 +1,96 @@
 "use client";
 import * as React from "react";
 import Image from "next/image";
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Divider from "@mui/material/Divider";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TranslateIcon from "@mui/icons-material/Translate";
 import WorkIcon from "@mui/icons-material/Work";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+
+function MenuBar() {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  return (
+    <React.Fragment>
+      <Box>
+        <IconButton aria-label="menu">
+          <MenuIcon onClick={handleClick} className={"text-8xl"}></MenuIcon>
+        </IconButton>
+        <Menu
+          anchorEl={anchorEl}
+          id="account-menu"
+          open={open}
+          onClose={handleClose}
+          onClick={handleClose}
+          transformOrigin={{ horizontal: "right", vertical: "top" }}
+          anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+        >
+          <MenuItem
+            onClick={handleClose}
+            className={
+              "text-7xl h-[120px] w-[640px] align-middle justify-center"
+            }
+          >
+            Home
+          </MenuItem>
+          <MenuItem
+            onClick={handleClose}
+            className={"text-7xl h-[144px] align-middle justify-center"}
+          >
+            Work
+          </MenuItem>
+          <MenuItem
+            onClick={handleClose}
+            className={"text-7xl h-[144px] align-middle justify-center"}
+          >
+            Docs
+          </MenuItem>
+          <Divider />
+          <MenuItem
+            onClick={handleClose}
+            className={"h-[144px] align-middle justify-center"}
+          >
+            <Stack
+              display={"flex"}
+              direction="row"
+              spacing={6}
+              alignItems={"center"}
+            >
+              <IconButton aria-label="github" color={"primary"}>
+                <GitHubIcon className={"text-6xl"} />
+              </IconButton>
+              <IconButton aria-label="language" color={"primary"}>
+                <TranslateIcon className={"text-6xl"} />
+              </IconButton>
+              <IconButton aria-label="job" color={"primary"}>
+                <WorkIcon className={"text-6xl"} />
+              </IconButton>
+            </Stack>
+          </MenuItem>
+        </Menu>
+      </Box>
+    </React.Fragment>
+  );
+}
+
 export default function Header() {
   const router = useRouter();
   return (
@@ -15,31 +98,32 @@ export default function Header() {
       <div>
         <Grid
           container
-          className={"h-[72px] w-full"}
+          className={"flex w-full min-h-[72px]"}
           alignItems={"center"}
-          display={"flex"}
         >
           <Grid item>
             <Grid container>
               <Grid item className={"w-[16px]"}></Grid>
-              <Grid item alignItems={"center"} display={"flex"}>
-                <Image
-                  src={"/Logo.svg"}
-                  alt="logo"
-                  width={40}
-                  height={40}
-                ></Image>
+              <Grid
+                item
+                alignItems={"center"}
+                display={"flex"}
+                className={
+                  "relative w-[128px] h-[128px] lg:w-[32px] lg:h-[32px]"
+                }
+              >
+                <Image src={"/Logo.svg"} fill alt="logo"></Image>
               </Grid>
               <Grid item alignItems={"center"} display={"flex"}>
                 <Typography
                   color={"primary"}
-                  className={"text-3xl lg:text-base"}
+                  className={"text-6xl lg:text-base"}
                 >
                   Design-Hu
                 </Typography>
               </Grid>
               <Grid item className={"w-[24px]"}></Grid>
-              <Grid item alignItems={"center"} display={"flex"}>
+              <Grid item alignItems={"center"} className={"hidden  lg:display"}>
                 <Button
                   variant={"text"}
                   className={
@@ -75,12 +159,20 @@ export default function Header() {
           <Grid
             item
             alignItems={"center"}
-            className={"flex"}
+            className={"flex lg:hidden"}
+            justifyContent={"right"}
+          >
+            <MenuBar></MenuBar>
+          </Grid>
+          <Grid
+            item
+            alignItems={"center"}
+            className={"hidden lg:flex"}
             justifyContent={"right"}
           >
             <Box
               className={
-                "hidden lg:flex rounded outline outline-1 h-[32px] outline-[#2196F3]"
+                "flex rounded outline outline-1 h-[32px] outline-[#2196F3]"
               }
               display={"flex"}
               alignItems={"center"}

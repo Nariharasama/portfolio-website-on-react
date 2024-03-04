@@ -19,8 +19,13 @@ export default function Footer() {
         display={"flex"}
       >
         <Grid item className={"w-[16px]"}></Grid>
-        <Grid item alignItems={"center"} display={"flex"}>
-          <Image src={"/Logo.svg"} alt="logo" width={40} height={40}></Image>
+        <Grid
+          item
+          alignItems={"center"}
+          display={"flex"}
+          className={"relative w-full h-[128px] lg:w-[32px] lg:h-[32px]"}
+        >
+          <Image src={"/Logo.svg"} fill alt="logo"></Image>
         </Grid>
         <Grid item alignItems={"center"} className={"hidden lg:flex"}>
           <Typography variant={"h6"}>Design-Hu</Typography>
@@ -32,7 +37,7 @@ export default function Footer() {
           display={"flex"}
           justifyContent={"right"}
         >
-          <Typography className={"flex  text-base lg:text-xs"}>
+          <Typography className={"flex  text-3xl lg:text-xs text-center"}>
             This site is build on Next.js and deployed on Vercel using MUI’s
             material UI components.
           </Typography>

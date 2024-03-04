@@ -141,17 +141,17 @@ function NaviButton() {
 function Education() {
   const EducationExperience = [
     {
-      school: "1.Young Gifted Project",
+      school: "1. Young Gifted Project",
       info: "A project held by Xi'an Jiaotong University.Special courses for 2 years in college instead of 3 years in high school.",
       time: "Aug.2019-Jul.2020",
     },
     {
-      school: "2.Xi’an Jiaotong University, China",
+      school: "2. Xi’an Jiaotong University, China",
       info: "Top 10 University in China. Major: Industrial Design",
       time: "Aug.2020-Jul.2024",
     },
     {
-      school: "3.Chiba University, Japan",
+      school: "3. Chiba University, Japan",
       info: "Exchange student in Top-D Project",
       time: "Apr.2022-Sep.2022",
     },
