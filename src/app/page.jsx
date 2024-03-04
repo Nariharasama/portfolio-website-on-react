@@ -53,11 +53,11 @@ function TitleText() {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"center"}
-            className={"w-[380px] lg:w-[520px]"}
+            className={"w-[640px] lg:w-[520px]"}
           >
             <Typography
               align={"left"}
-              className={"text-4xl  lg:text-5xl h-[48px] lg:h-[72px] w-[520px]"}
+              className={"w-full text-6xl  lg:text-5xl h-[104px] lg:h-[72px]"}
             >
               {welcomeFull}
             </Typography>
@@ -74,7 +74,7 @@ function TitleText() {
         <Typography
           align={"center"}
           color={"primary"}
-          className={"text-2xl  lg:text-4xl  h-[56px]"}
+          className={" w-11/12 text-5xl  lg:text-4xl h-[160px] lg:h-[56px]"}
         >
           UI designer as well as front-end developer.
         </Typography>
@@ -87,7 +87,7 @@ function TitleText() {
       >
         <Typography
           align={"center"}
-          className={"w-10/12  text-xl  lg:text-2xl"}
+          className={"w-10/12  text-3xl  lg:text-2xl h-[200px]  lg:h-[72px]"}
         >
           I'm working with Next.js (React) to build highly interactive web
           prototype.
@@ -102,7 +102,7 @@ function TitleText() {
 
 function NaviButton() {
   return (
-    <Grid container spacing={2} className={"h-[160px] w-full"}>
+    <Grid container spacing={2} className={"h-[320px] lg:h-[160px] w-full"}>
       <Grid
         item
         alignItems={"center"}
@@ -112,14 +112,13 @@ function NaviButton() {
       >
         <Button
           variant={"contained"}
-          endIcon={<ArrowForward />}
-          size={"large"}
-          className={"normal-case w-[160px]"}
+          className={
+            "normal-case w-[300px] h-[120px] lg:w-[160px] lg:h-[64px] text-3xl lg:text-lg"
+          }
         >
           Workflow
         </Button>
       </Grid>
-      <Grid xs={0.2} display={"flex"}></Grid>
       <Grid
         item
         xs
@@ -129,8 +128,9 @@ function NaviButton() {
       >
         <Button
           variant={"outlined"}
-          size={"large"}
-          className={"normal-case w-[160px]"}
+          className={
+            "normal-case w-[300px] h-[120px] lg:w-[160px] lg:h-[64px] text-3xl lg:text-lg"
+          }
         >
           Prototypes
         </Button>
@@ -160,14 +160,14 @@ function Education() {
   return (
     <>
       <Box
-        className={"w-full h-[80px]"}
+        className={"w-full h-[240px] lg:h-[80px]"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
       >
         <Typography
           align={"center"}
-          variant={"h5"}
+          className={"text-5xl lg:text-xl"}
           display={"flex"}
           color={"primary"}
         >
@@ -186,28 +186,26 @@ function Education() {
         {EducationExperience.map((c, i) => (
           <Card
             key={i}
-            className={"w-[480px] h-[320px] lg:w-[360px] lg:h-[240px]"}
+            className={"w-[600px] h-[320px] lg:w-[360px] lg:h-[240px]"}
           >
             <CardContent>
               <Typography
                 align={"left"}
-                className={"w-full h-[64px]"}
-                variant={"subtitle2"}
+                className={"w-full h-[64px] text-3xl lg:text-sm"}
                 display={"flex"}
               >
                 {c.school}
               </Typography>
               <Typography
                 align={"left"}
-                className={"w-full h-[120px] text-xs"}
+                className={"w-full h-[120px] text-xl  lg:text-xs"}
                 display={"flex"}
               >
                 {c.info}
               </Typography>
               <Typography
                 align={"left"}
-                className={"w-full"}
-                variant={"h6"}
+                className={"w-full text-2xl  lg:text-sm"}
                 display={"flex"}
                 color={"primary"}
               >

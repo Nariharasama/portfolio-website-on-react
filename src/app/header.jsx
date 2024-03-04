@@ -31,7 +31,10 @@ export default function Header() {
                 ></Image>
               </Grid>
               <Grid item alignItems={"center"} display={"flex"}>
-                <Typography variant={"h6"} color={"primary"}>
+                <Typography
+                  color={"primary"}
+                  className={"text-3xl lg:text-base"}
+                >
                   Design-Hu
                 </Typography>
               </Grid>
@@ -39,7 +42,9 @@ export default function Header() {
               <Grid item alignItems={"center"} display={"flex"}>
                 <Button
                   variant={"text"}
-                  className={"normal-case w-[54px] text-base"}
+                  className={
+                    "normal-case  w-[120px] lg:w-[54px] text-2xl lg:text-base"
+                  }
                   disableRipple
                   color={"primary"}
                 >
@@ -47,14 +52,18 @@ export default function Header() {
                 </Button>
                 <Button
                   variant={"text"}
-                  className={"normal-case w-[54px] text-base"}
+                  className={
+                    "normal-case w-[120px]  lg:w-[54px] text-2xl lg:text-base"
+                  }
                   disableRipple
                 >
                   Work
                 </Button>
                 <Button
                   variant={"text"}
-                  className={"normal-case w-[54px] text-base"}
+                  className={
+                    "normal-case w-[120px] lg:w-[54px] text-2xl lg:text-base"
+                  }
                   disableRipple
                 >
                   Docs

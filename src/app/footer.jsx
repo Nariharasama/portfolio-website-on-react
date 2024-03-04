@@ -32,7 +32,7 @@ export default function Footer() {
           display={"flex"}
           justifyContent={"right"}
         >
-          <Typography className={"flex text-xs"}>
+          <Typography className={"flex  text-base lg:text-xs"}>
             This site is build on Next.js and deployed on Vercel using MUI’s
             material UI components.
           </Typography>
