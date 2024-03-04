@@ -15,12 +15,11 @@ export default function Header() {
       <div>
         <Grid
           container
-          spacing={1}
           className={"h-[72px] w-full"}
           alignItems={"center"}
           display={"flex"}
         >
-          <Grid item xs={4.5}>
+          <Grid item>
             <Grid container>
               <Grid item className={"w-[16px]"}></Grid>
               <Grid item alignItems={"center"} display={"flex"}>
@@ -36,7 +35,7 @@ export default function Header() {
                   Design-Hu
                 </Typography>
               </Grid>
-              <Grid item className={"w-[72px]"}></Grid>
+              <Grid item className={"w-[24px]"}></Grid>
               <Grid item alignItems={"center"} display={"flex"}>
                 <Button
                   variant={"text"}
@@ -67,12 +66,13 @@ export default function Header() {
           <Grid
             item
             alignItems={"center"}
-            display={"flex"}
+            className={"flex"}
             justifyContent={"right"}
-            xs={7}
           >
             <Box
-              className={"rounded outline outline-1 h-[32px] outline-[#2196F3]"}
+              className={
+                "hidden lg:flex rounded outline outline-1 h-[32px] outline-[#2196F3]"
+              }
               display={"flex"}
               alignItems={"center"}
             >
@@ -82,8 +82,7 @@ export default function Header() {
                 color={"primary"}
                 align={"center"}
               >
-                Recently searching for job. Contact me if you're requiring web
-                developer or designer.
+                Recently searching for job as a designer or front-end developer.
               </Typography>
               <Box className={"w-[6px]"}></Box>
             </Box>

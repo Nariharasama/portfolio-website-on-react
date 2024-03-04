@@ -14,7 +14,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  width: "1440",
+  width: "720",
   maximumScale: 1,
   userScalable: false,
   // Also supported by less commonly used

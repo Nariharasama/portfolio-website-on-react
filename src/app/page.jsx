@@ -1,8 +1,16 @@
 "use client";
-import { Box, Button, Card, CardContent, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Stack,
+  Typography,
+} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { ArrowForward } from "@mui/icons-material";
 import { useState, useEffect } from "react";
+import Divider from "@mui/material/Divider";
 
 function TitleText() {
   const content = " Hi,I'm Hu Shengyuan";
@@ -45,12 +53,11 @@ function TitleText() {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"center"}
-            className={"w-[520px]"}
+            className={"w-[380px] lg:w-[520px]"}
           >
             <Typography
-              variant={"h3"}
               align={"left"}
-              className={"h-[72px] w-[520px]"}
+              className={"text-4xl  lg:text-5xl h-[48px] lg:h-[72px] w-[520px]"}
             >
               {welcomeFull}
             </Typography>
@@ -65,10 +72,9 @@ function TitleText() {
         justifyContent={"center"}
       >
         <Typography
-          variant={"h4"}
           align={"center"}
           color={"primary"}
-          className={"h-[56px]"}
+          className={"text-2xl  lg:text-4xl  h-[56px]"}
         >
           UI designer as well as front-end developer.
         </Typography>
@@ -79,7 +85,10 @@ function TitleText() {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Typography variant={"h5"} align={"center"}>
+        <Typography
+          align={"center"}
+          className={"w-10/12  text-xl  lg:text-2xl"}
+        >
           I'm working with Next.js (React) to build highly interactive web
           prototype.
           <br />
@@ -131,155 +140,84 @@ function NaviButton() {
 }
 
 function Education() {
+  const EducationExperience = [
+    {
+      school: "1.Young Gifted Project",
+      info: "A project held by Xi'an Jiaotong University.Special courses for 2 years in college instead of 3 years in high school.",
+      time: "Aug.2019-Jul.2020",
+    },
+    {
+      school: "2.Xi’an Jiaotong University, China",
+      info: "Top 10 University in China. Major: Industrial Design",
+      time: "Aug.2020-Jul.2024",
+    },
+    {
+      school: "3.Chiba University, Japan",
+      info: "Exchange student in Top-D Project",
+      time: "Apr.2022-Sep.2022",
+    },
+  ];
   return (
     <>
       <Box
-        className={"w-full h-[40px]"}
+        className={"w-full h-[80px]"}
         display={"flex"}
         alignItems={"center"}
         justifyContent={"center"}
       >
         <Typography
           align={"center"}
-          variant={"h6"}
+          variant={"h5"}
           display={"flex"}
           color={"primary"}
         >
           Education Experience
         </Typography>
       </Box>
-      <Box className={"w-full h-[400px]"} display={"flex"}>
-        <Grid
-          container
-          className={"w-full h-[360px]"}
-          display={"flex"}
-          spacing={1}
-          alignItems={"center"}
-          justifyContent={"center"}
-        >
-          <Grid xs display={"flex"}></Grid>
-          <Grid
-            item
-            display={"flex"}
-            xs={3.5}
-            alignItems={"center"}
-            justifyContent={"center"}
+      <Stack
+        className={"w-full h-[800px] lg:h-[280px]"}
+        display={"flex"}
+        direction={{ xs: "column", md: "row" }}
+        spacing={2}
+        alignItems={"center"}
+        justifyContent={"space-evenly"}
+        divider={<Divider orientation={"vertical"} flexItem />}
+      >
+        {EducationExperience.map((c, i) => (
+          <Card
+            key={i}
+            className={"w-[480px] h-[320px] lg:w-[360px] lg:h-[240px]"}
           >
-            <Card className={"w-[420px] h-[320px]"}>
-              <CardContent>
-                <Typography
-                  align={"left"}
-                  className={"w-[400px]"}
-                  variant={"subtitle2"}
-                  display={"flex"}
-                >
-                  1.Xi’an Jiaotong University’s Young Gifted Project
-                </Typography>
-                <Box className={"w-full h-[48px]"}></Box>
-                <Typography
-                  align={"left"}
-                  className={"w-[320px] h-[180px] text-xs"}
-                  display={"flex"}
-                >
-                  After graduated from middle school, I entered The Young gifted
-                  Project by passing the test instead of going to high schools.
-                  I got more time for my hobbies there: Programming. We attended
-                  math modeling competitions and solved problem together.
-                </Typography>
-                <Typography
-                  align={"left"}
-                  className={"w-[400px]"}
-                  variant={"h6"}
-                  display={"flex"}
-                  color={"primary"}
-                >
-                  Aug.2019-Jul.2020
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid
-            item
-            display={"flex"}
-            xs={3.5}
-            alignItems={"center"}
-            justifyContent={"center"}
-          >
-            <Card className={"w-[420px] h-[320px]"}>
-              <CardContent>
-                <Typography
-                  align={"left"}
-                  className={"w-[400px]"}
-                  variant={"subtitle2"}
-                  display={"flex"}
-                >
-                  2.Xi’an Jiaotong University, China
-                </Typography>
-                <Box className={"w-full h-[48px]"}></Box>
-                <Typography
-                  align={"left"}
-                  className={"w-[320px] h-[180px] text-xs"}
-                  display={"flex"}
-                >
-                  I entered college after finishing Young Gifted Project’s
-                  courses. I chose industrial design as my major and started
-                  exploration of web design. I got to learn most of design tech
-                  and front-end framework during this period.
-                </Typography>
-                <Typography
-                  align={"left"}
-                  className={"w-[400px]"}
-                  variant={"h6"}
-                  display={"flex"}
-                  color={"primary"}
-                >
-                  Aug.2020-Jul.2024
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid
-            item
-            display={"flex"}
-            xs={3.5}
-            alignItems={"center"}
-            justifyContent={"center"}
-          >
-            <Card className={"w-[420px] h-[320px]"}>
-              <CardContent>
-                <Typography
-                  align={"left"}
-                  className={"w-[400px]"}
-                  variant={"subtitle2"}
-                  display={"flex"}
-                >
-                  3.Chiba University, Japan (Exchange student)
-                </Typography>
-                <Box className={"w-full h-[48px]"}></Box>
-                <Typography
-                  align={"left"}
-                  className={"w-[320px] h-[180px] text-xs"}
-                  display={"flex"}
-                >
-                  I got the chance to study in Chiba University as an exchange
-                  student. We joined many design projects, created all kinds of
-                  prototypes from product, videos to website.
-                </Typography>
-                <Typography
-                  align={"left"}
-                  className={"w-[400px]"}
-                  variant={"h6"}
-                  display={"flex"}
-                  color={"primary"}
-                >
-                  Apr.2022-Sep.2022
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid xs display={"flex"}></Grid>
-        </Grid>
-      </Box>
+            <CardContent>
+              <Typography
+                align={"left"}
+                className={"w-full h-[64px]"}
+                variant={"subtitle2"}
+                display={"flex"}
+              >
+                {c.school}
+              </Typography>
+              <Typography
+                align={"left"}
+                className={"w-full h-[120px] text-xs"}
+                display={"flex"}
+              >
+                {c.info}
+              </Typography>
+              <Typography
+                align={"left"}
+                className={"w-full"}
+                variant={"h6"}
+                display={"flex"}
+                color={"primary"}
+              >
+                Aug.2019-Jul.2020
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
+      </Stack>
+      <Box className={"h-[80px]"}></Box>
     </>
   );
 }
