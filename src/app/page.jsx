@@ -37,7 +37,7 @@ function TitleText() {
         }, 300);
       }
     }
-  });
+  }, [isOver, welcome]);
   if (isOver !== 2) {
     welcomeFull = welcomeFull.concat("_");
   }
@@ -208,7 +208,7 @@ function Education() {
                 display={"flex"}
                 color={"primary"}
               >
-                Aug.2019-Jul.2020
+                {c.time}
               </Typography>
             </CardContent>
           </Card>

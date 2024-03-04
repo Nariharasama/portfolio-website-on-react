@@ -64,27 +64,22 @@ function MenuBar() {
             Docs
           </MenuItem>
           <Divider />
-          <MenuItem
-            onClick={handleClose}
+          <Stack
+            display={"flex"}
+            direction="row"
+            spacing={6}
             className={"h-[144px] align-middle justify-center"}
           >
-            <Stack
-              display={"flex"}
-              direction="row"
-              spacing={6}
-              alignItems={"center"}
-            >
-              <IconButton aria-label="github" color={"primary"}>
-                <GitHubIcon className={"text-6xl"} />
-              </IconButton>
-              <IconButton aria-label="language" color={"primary"}>
-                <TranslateIcon className={"text-6xl"} />
-              </IconButton>
-              <IconButton aria-label="job" color={"primary"}>
-                <WorkIcon className={"text-6xl"} />
-              </IconButton>
-            </Stack>
-          </MenuItem>
+            <IconButton aria-label="github" color={"primary"}>
+              <GitHubIcon className={"text-6xl"} />
+            </IconButton>
+            <IconButton aria-label="language" color={"primary"}>
+              <TranslateIcon className={"text-6xl"} />
+            </IconButton>
+            <IconButton aria-label="job" color={"primary"}>
+              <WorkIcon className={"text-6xl"} />
+            </IconButton>
+          </Stack>
         </Menu>
       </Box>
     </React.Fragment>
@@ -123,7 +118,7 @@ export default function Header() {
                 </Typography>
               </Grid>
               <Grid item className={"w-[24px]"}></Grid>
-              <Grid item alignItems={"center"} className={"hidden  lg:display"}>
+              <Grid item alignItems={"center"} className={"hidden lg:flex"}>
                 <Button
                   variant={"text"}
                   className={

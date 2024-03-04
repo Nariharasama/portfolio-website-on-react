@@ -37,7 +37,7 @@ export default function Footer() {
           display={"flex"}
           justifyContent={"right"}
         >
-          <Typography className={"flex  text-3xl lg:text-xs text-center"}>
+          <Typography className={"flex  text-3xl lg:text-sm text-center"}>
             This site is build on Next.js and deployed on Vercel using MUI’s
             material UI components.
           </Typography>
@@ -51,7 +51,7 @@ export default function Footer() {
             MUI
           </Link>
           <Link
-            className={"w-[36px] cursor-pointer text-sm hidden lg:flex"}
+            className={"w-[48px] cursor-pointer text-sm hidden lg:flex"}
             onClick={() => {
               router.push("https://vercel.com/shengyuan-hus-projects");
             }}
