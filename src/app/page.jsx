@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import { ArrowForward } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 import Divider from "@mui/material/Divider";
 
