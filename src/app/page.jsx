@@ -10,7 +10,7 @@ import {
 import Grid from "@mui/material/Unstable_Grid2";
 import { useState, useEffect } from "react";
 import Divider from "@mui/material/Divider";
-
+import { useRouter } from "next/navigation";
 function TitleText() {
   const content = " Hi,I'm Hu Shengyuan";
   const [welcome, setWelcome] = useState("");
@@ -100,6 +100,7 @@ function TitleText() {
 }
 
 function NaviButton() {
+  const router = useRouter();
   return (
     <Grid container spacing={2} className={"h-[320px] lg:h-[160px] w-full"}>
       <Grid
@@ -114,6 +115,9 @@ function NaviButton() {
           className={
             "normal-case w-[300px] h-[120px] lg:w-[160px] lg:h-[64px] text-3xl lg:text-lg"
           }
+          onClick={() => {
+            router.push("/work");
+          }}
         >
           Workflow
         </Button>

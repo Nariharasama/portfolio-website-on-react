@@ -28,6 +28,7 @@ function MenuBar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const router = useRouter();
   return (
     <React.Fragment>
       <Box>
@@ -44,7 +45,7 @@ function MenuBar() {
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
           <MenuItem
-            onClick={handleClose}
+            onClick={() => router.push("./")}
             className={
               "text-7xl h-[120px] w-[640px] align-middle justify-center"
             }
@@ -52,7 +53,7 @@ function MenuBar() {
             Home
           </MenuItem>
           <MenuItem
-            onClick={handleClose}
+            onClick={() => router.push("./work")}
             className={"text-7xl h-[144px] align-middle justify-center"}
           >
             Work
@@ -126,6 +127,7 @@ export default function Header() {
                   }
                   disableRipple
                   color={"primary"}
+                  onClick={() => router.push("./")}
                 >
                   Home
                 </Button>
@@ -134,6 +136,7 @@ export default function Header() {
                   className={
                     "normal-case w-[120px]  lg:w-[54px] text-2xl lg:text-base"
                   }
+                  onClick={() => router.push("./work")}
                   disableRipple
                 >
                   Work
