@@ -14,10 +14,10 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Divider from "@mui/material/Divider";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TranslateIcon from "@mui/icons-material/Translate";
-import WorkIcon from "@mui/icons-material/Work";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 function MenuBar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -78,7 +78,7 @@ function MenuBar() {
               <TranslateIcon className={"text-6xl"} />
             </IconButton>
             <IconButton aria-label="job" color={"primary"}>
-              <WorkIcon className={"text-6xl"} />
+              <MailOutlineIcon className={"text-6xl"} />
             </IconButton>
           </Stack>
         </Menu>
@@ -160,7 +160,7 @@ export default function Header() {
             className={"flex lg:hidden"}
             justifyContent={"right"}
           >
-            <MenuBar></MenuBar>
+            <MenuBar />
           </Grid>
           <Grid
             item
@@ -234,7 +234,7 @@ export default function Header() {
                   "rounded outline outline-1 h-[32px] w-[32px] outline-[#2196F3]"
                 }
               >
-                <WorkIcon className={"h-[20px]"} />
+                <MailOutlineIcon className={"h-[20px]"} />
               </IconButton>
             </Box>
           </Grid>
