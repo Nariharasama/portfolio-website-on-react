@@ -45,7 +45,7 @@ function MenuBar() {
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
           <MenuItem
-            onClick={() => router.push("./")}
+            onClick={() => router.push("/")}
             className={
               "text-7xl h-[120px] w-[640px] align-middle justify-center"
             }
@@ -53,7 +53,7 @@ function MenuBar() {
             Home
           </MenuItem>
           <MenuItem
-            onClick={() => router.push("./work")}
+            onClick={() => router.push("/work")}
             className={"text-7xl h-[144px] align-middle justify-center"}
           >
             Work
@@ -77,7 +77,11 @@ function MenuBar() {
             <IconButton aria-label="language" color={"primary"}>
               <TranslateIcon className={"text-6xl"} />
             </IconButton>
-            <IconButton aria-label="job" color={"primary"}>
+            <IconButton
+              aria-label="job"
+              color={"primary"}
+              onClick={() => router.push("/contact")}
+            >
               <MailOutlineIcon className={"text-6xl"} />
             </IconButton>
           </Stack>
@@ -131,7 +135,7 @@ export default function Header() {
                 }
                 disableRipple
                 color={"primary"}
-                onClick={() => router.push("./")}
+                onClick={() => router.push("/")}
               >
                 Home
               </Button>
@@ -140,7 +144,7 @@ export default function Header() {
                 className={
                   "normal-case w-[120px]  lg:w-[54px] text-2xl lg:text-base"
                 }
-                onClick={() => router.push("./work")}
+                onClick={() => router.push("/work")}
                 disableRipple
               >
                 Work
@@ -236,6 +240,7 @@ export default function Header() {
                 className={
                   "rounded outline outline-1 h-[32px] w-[32px] outline-outline"
                 }
+                onClick={() => router.push("/contact")}
               >
                 <MailOutlineIcon className={"h-[20px]"} />
               </IconButton>

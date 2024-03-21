@@ -22,7 +22,9 @@ import { useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { ArrowForwardIos } from "@mui/icons-material";
 import Divider from "@mui/material/Divider";
+import { useRouter } from "next/navigation";
 export default function Work() {
+  const router = useRouter();
   return (
     <React.Fragment>
       <Stack
@@ -48,7 +50,7 @@ export default function Work() {
       <Steps />
       <MobileSteps />
       <Creation />
-      <OrderNow />
+      <OrderNow router={router} />
     </React.Fragment>
   );
 }
@@ -433,7 +435,7 @@ function MobileSteps() {
   );
 }
 
-function OrderNow() {
+function OrderNow({ router }) {
   return (
     <Stack
       direction={{ sm: "column", md: "row" }}
@@ -450,6 +452,7 @@ function OrderNow() {
         className={
           "w-[560px] h-[120px] lg:w-[200px] lg:h-[56px] text-4xl lg:text-base normal-case"
         }
+        onClick={() => router.push("/contact")}
       >
         Contact me now!
       </Button>
