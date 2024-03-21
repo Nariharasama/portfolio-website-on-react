@@ -10,61 +10,65 @@ export default function Footer() {
   return (
     <React.Fragment>
       <Divider></Divider>
-      <Stack
-        className={"m-h-[56px] w-full flex"}
-        alignItems={"center"}
-        direction={"row"}
-        justifyContent={"start"}
-      >
-        <Box className={"w-[16px]"}></Box>
-        <Box className={"w-[128px] h-[128px] lg:w-[48px] lg:h-[32px] relative"}>
-          <Image src={"/Logo.svg"} fill alt="logo"></Image>
-        </Box>
-        <Box alignItems={"center"} className={"hidden lg:flex"}>
-          <Typography color={"primary"} className={"text-6xl lg:text-base"}>
-            Design-Hu
-          </Typography>
-        </Box>
-        <Box className={"flex grow"}></Box>
+      <div>
         <Stack
+          className={"min-h-[56px] w-full flex"}
           alignItems={"center"}
-          className={"flex"}
-          justifyContent={"end"}
           direction={"row"}
+          justifyContent={"start"}
         >
-          <Typography className={"flex  text-3xl lg:text-sm text-center"}>
-            This site is build on Next.js and deployed on Vercel using MUI’s
-            material UI components.
-          </Typography>
-          <Box className={"w-[8px]"}></Box>
-          <Link
-            className={"w-[36px] cursor-pointer text-sm hidden lg:flex"}
-            onClick={() => {
-              router.push("https://mui.com/material-ui/");
-            }}
+          <Box className={"w-[16px]"}></Box>
+          <Box
+            className={"w-[128px] h-[128px] lg:w-[48px] lg:h-[32px] relative"}
           >
-            MUI
-          </Link>
-          <Link
-            className={"w-[48px] cursor-pointer text-sm hidden lg:flex"}
-            onClick={() => {
-              router.push("https://vercel.com/shengyuan-hus-projects");
-            }}
+            <Image src={"/Logo.svg"} fill alt="logo"></Image>
+          </Box>
+          <Box alignItems={"center"} className={"hidden lg:flex"}>
+            <Typography color={"primary"} className={"text-6xl lg:text-base"}>
+              Design-Hu
+            </Typography>
+          </Box>
+          <Box className={"flex grow"}></Box>
+          <Stack
+            alignItems={"center"}
+            className={"flex"}
+            justifyContent={"end"}
+            direction={"row"}
           >
-            Vercel
-          </Link>
-          <Link
-            className={"w-[80px] cursor-pointer text-sm hidden lg:flex"}
-            onClick={() => {
-              router.push("./contact");
-            }}
-            align={"right"}
-          >
-            Contact me
-          </Link>
+            <Typography className={"flex  text-3xl lg:text-sm text-center"}>
+              This site is build on Next.js and deployed on Vercel using MUI’s
+              material UI components.
+            </Typography>
+            <Box className={"w-[8px]"}></Box>
+            <Link
+              className={"w-[36px] cursor-pointer text-sm hidden lg:flex"}
+              onClick={() => {
+                router.push("https://mui.com/material-ui/");
+              }}
+            >
+              MUI
+            </Link>
+            <Link
+              className={"w-[48px] cursor-pointer text-sm hidden lg:flex"}
+              onClick={() => {
+                router.push("https://vercel.com/shengyuan-hus-projects");
+              }}
+            >
+              Vercel
+            </Link>
+            <Link
+              className={"w-[80px] cursor-pointer text-sm hidden lg:flex"}
+              onClick={() => {
+                router.push("./contact");
+              }}
+              align={"right"}
+            >
+              Contact me
+            </Link>
+          </Stack>
+          <Box className={"w-[16px]"}></Box>
         </Stack>
-        <Box className={"w-[16px]"}></Box>
-      </Stack>
+      </div>
     </React.Fragment>
   );
 }
