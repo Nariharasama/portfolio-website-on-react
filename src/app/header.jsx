@@ -92,98 +92,101 @@ export default function Header() {
   return (
     <React.Fragment>
       <div>
-        <Grid
-          container
-          className={"flex w-full min-h-[72px]"}
+        <Stack
+          className={"flex w-full min-h-[56px]"}
           alignItems={"center"}
+          direction={"row"}
         >
-          <Grid item>
-            <Grid container>
-              <Grid item className={"w-[16px]"}></Grid>
-              <Grid
-                item
-                alignItems={"center"}
-                display={"flex"}
+          <Stack direction={"row"} className={"flex"} alignItems={"center"}>
+            <Box className={"w-[16px]"}></Box>
+            <Stack
+              item
+              alignItems={"center"}
+              justifyContent={"start"}
+              display={"flex"}
+              className={"flex"}
+            >
+              <Box
                 className={
-                  "relative w-[128px] h-[128px] lg:w-[32px] lg:h-[32px]"
+                  "w-[128px] h-[128px] lg:w-[48px] lg:h-[32px] relative"
                 }
               >
                 <Image src={"/Logo.svg"} fill alt="logo"></Image>
-              </Grid>
-              <Grid item alignItems={"center"} display={"flex"}>
-                <Typography
-                  color={"primary"}
-                  className={"text-6xl lg:text-base"}
-                >
-                  Design-Hu
-                </Typography>
-              </Grid>
-              <Grid item className={"w-[24px]"}></Grid>
-              <Grid item alignItems={"center"} className={"hidden lg:flex"}>
-                <Button
-                  variant={"text"}
-                  className={
-                    "normal-case  w-[120px] lg:w-[54px] text-2xl lg:text-base"
-                  }
-                  disableRipple
-                  color={"primary"}
-                  onClick={() => router.push("./")}
-                >
-                  Home
-                </Button>
-                <Button
-                  variant={"text"}
-                  className={
-                    "normal-case w-[120px]  lg:w-[54px] text-2xl lg:text-base"
-                  }
-                  onClick={() => router.push("./work")}
-                  disableRipple
-                >
-                  Work
-                </Button>
-                <Button
-                  variant={"text"}
-                  className={
-                    "normal-case w-[120px] lg:w-[54px] text-2xl lg:text-base"
-                  }
-                  disableRipple
-                >
-                  Docs
-                </Button>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid xs display={"flex"}></Grid>
-          <Grid
-            item
+              </Box>
+            </Stack>
+            <Typography color={"primary"} className={"text-6xl lg:text-base"}>
+              Design-Hu
+            </Typography>
+            <Box item className={"w-[24px]"}></Box>
+            <Stack
+              alignItems={"center"}
+              justifyContent={"center"}
+              className={"hidden lg:flex"}
+              direction={"row"}
+            >
+              <Button
+                variant={"text"}
+                className={
+                  "normal-case  w-[120px] lg:w-[54px] text-2xl lg:text-base"
+                }
+                disableRipple
+                color={"primary"}
+                onClick={() => router.push("./")}
+              >
+                Home
+              </Button>
+              <Button
+                variant={"text"}
+                className={
+                  "normal-case w-[120px]  lg:w-[54px] text-2xl lg:text-base"
+                }
+                onClick={() => router.push("./work")}
+                disableRipple
+              >
+                Work
+              </Button>
+              <Button
+                variant={"text"}
+                className={
+                  "normal-case w-[120px] lg:w-[54px] text-2xl lg:text-base"
+                }
+                disableRipple
+              >
+                Docs
+              </Button>
+            </Stack>
+          </Stack>
+          <Box className={"grow flex"}></Box>
+          <Box
             alignItems={"center"}
             className={"flex lg:hidden"}
             justifyContent={"right"}
           >
             <MenuBar />
-          </Grid>
-          <Grid
-            item
+          </Box>
+          <Stack
             alignItems={"center"}
             className={"hidden lg:flex"}
             justifyContent={"right"}
+            direction={"row"}
           >
             <Box
               className={
-                "flex rounded outline outline-1 h-[32px] outline-[#2196F3]"
+                "flex rounded outline outline-1 h-[32px] outline-outline"
               }
               display={"flex"}
               alignItems={"center"}
             >
-              <Box className={"w-[6px]"}></Box>
+              <Box className={"w-[8px]"}></Box>
               <Typography
                 className={"text-xs"}
                 color={"primary"}
                 align={"center"}
               >
-                Recently searching for job as a designer or front-end developer.
+                Searching for a design/develop part-time job. Contact me for
+                more info.
               </Typography>
-              <Box className={"w-[6px]"}></Box>
+              <Box className={"w-[8px]"}></Box>
             </Box>
             <Box className={"w-[4px]"}></Box>
             <Box
@@ -196,7 +199,7 @@ export default function Header() {
                 aria-label="github"
                 color={"primary"}
                 className={
-                  "rounded outline outline-1 h-[32px] w-[32px] outline-[#2196F3]"
+                  "rounded outline outline-1 h-[32px] w-[32px] outline-outline"
                 }
                 onClick={() => {
                   router.push("https://github.com/Nariharasama");
@@ -215,7 +218,7 @@ export default function Header() {
                 aria-label="github"
                 color={"primary"}
                 className={
-                  "rounded outline outline-1 h-[32px] w-[32px] outline-[#2196F3]"
+                  "rounded outline outline-1 h-[32px] w-[32px] outline-outline"
                 }
               >
                 <TranslateIcon className={"h-[20px]"} />
@@ -231,15 +234,15 @@ export default function Header() {
                 aria-label="github"
                 color={"primary"}
                 className={
-                  "rounded outline outline-1 h-[32px] w-[32px] outline-[#2196F3]"
+                  "rounded outline outline-1 h-[32px] w-[32px] outline-outline"
                 }
               >
                 <MailOutlineIcon className={"h-[20px]"} />
               </IconButton>
             </Box>
-          </Grid>
+          </Stack>
           <Grid item className={"w-[4px]"}></Grid>
-        </Grid>
+        </Stack>
       </div>
       <Divider />
     </React.Fragment>

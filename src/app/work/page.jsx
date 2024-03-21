@@ -411,7 +411,7 @@ function MobileSteps() {
                     variant="contained"
                     onClick={handleNext}
                     disabled={index === 2}
-                    className={"w-[320px] h-[120px] normal-case"}
+                    className={"w-[320px] h-[120px] normal-case text-3xl"}
                   >
                     Next
                   </Button>
@@ -419,7 +419,7 @@ function MobileSteps() {
                     disabled={index === 0}
                     variant="outlined"
                     onClick={handleBack}
-                    className={"w-[320px] h-[120px] normal-case"}
+                    className={"w-[320px] h-[120px] normal-case text-3xl"}
                   >
                     Back
                   </Button>

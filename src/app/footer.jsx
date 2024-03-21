@@ -1,8 +1,7 @@
 "use client";
 import * as React from "react";
 import Image from "next/image";
-import { Link, Typography } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import { useRouter } from "next/navigation";
 
@@ -11,37 +10,33 @@ export default function Footer() {
   return (
     <React.Fragment>
       <Divider></Divider>
-      <Grid
-        container
-        spacing={1}
-        className={"h-[72px] w-full"}
+      <Stack
+        className={"m-h-[56px] w-full flex"}
         alignItems={"center"}
-        display={"flex"}
+        direction={"row"}
+        justifyContent={"start"}
       >
-        <Grid item className={"w-[16px]"}></Grid>
-        <Grid
-          item
-          alignItems={"center"}
-          display={"flex"}
-          className={"relative w-full h-[128px] lg:w-[32px] lg:h-[32px]"}
-        >
+        <Box className={"w-[16px]"}></Box>
+        <Box className={"w-[128px] h-[128px] lg:w-[48px] lg:h-[32px] relative"}>
           <Image src={"/Logo.svg"} fill alt="logo"></Image>
-        </Grid>
-        <Grid item alignItems={"center"} className={"hidden lg:flex"}>
-          <Typography variant={"h6"}>Design-Hu</Typography>
-        </Grid>
-        <Grid xs display={"flex"}></Grid>
-        <Grid
-          item
+        </Box>
+        <Box alignItems={"center"} className={"hidden lg:flex"}>
+          <Typography color={"primary"} className={"text-6xl lg:text-base"}>
+            Design-Hu
+          </Typography>
+        </Box>
+        <Box className={"flex grow"}></Box>
+        <Stack
           alignItems={"center"}
-          display={"flex"}
-          justifyContent={"right"}
+          className={"flex"}
+          justifyContent={"end"}
+          direction={"row"}
         >
           <Typography className={"flex  text-3xl lg:text-sm text-center"}>
             This site is build on Next.js and deployed on Vercel using MUI’s
             material UI components.
           </Typography>
-          <Grid item className={"w-[8px]"}></Grid>
+          <Box className={"w-[8px]"}></Box>
           <Link
             className={"w-[36px] cursor-pointer text-sm hidden lg:flex"}
             onClick={() => {
@@ -67,9 +62,9 @@ export default function Footer() {
           >
             Contact me
           </Link>
-        </Grid>
-        <Grid item className={"w-[16px]"}></Grid>
-      </Grid>
+        </Stack>
+        <Box className={"w-[16px]"}></Box>
+      </Stack>
     </React.Fragment>
   );
 }
