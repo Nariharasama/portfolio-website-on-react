@@ -4,7 +4,7 @@ import Divider from "@mui/material/Divider";
 export default function notFound() {
   return (
     <Box
-      className={"h-[1440px]  lg:h-[640px]"}
+      className={"h-screen  lg:h-screen"}
       justifyContent={"center"}
       alignItems={"center"}
       display={"flex"}
